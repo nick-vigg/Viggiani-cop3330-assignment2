@@ -26,7 +26,7 @@ package ex24;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class App {
+public class AnagramChecker {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter two strings and I'll tell you if they are anagrams:");
@@ -42,7 +42,7 @@ public class App {
 
     }
 
-    private static boolean isAnagram(String firstString, String secondString) {
+    public static boolean isAnagram(String firstString, String secondString) {
         if(firstString.length() != secondString.length()){
             return false;
         } else {
@@ -51,6 +51,7 @@ public class App {
             Arrays.sort(firstArray);
             Arrays.sort(secondArray);
             return Arrays.equals(firstArray, secondArray);
+
         }
     }
 }
