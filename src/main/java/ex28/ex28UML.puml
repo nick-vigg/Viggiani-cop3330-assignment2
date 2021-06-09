@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+class AddingNumbers{
+
+}
+
+Counter->AddingNumbers
+Counter : int total;
+Counter : int num, sum;
+
+
+
+@enduml
