@@ -10,8 +10,8 @@ class AddingNumbersTest {
         //given
         AddingNumbers an = new AddingNumbers();
         //when
-        String actual = an.Counter(5);
-        String expected = "The total is " + 5;
+        String actual = an.Output(5);
+        String expected = "The total is 5";
         //then
         assertEquals(expected, actual);
 

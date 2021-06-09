@@ -26,20 +26,23 @@ import java.util.Scanner;
 public class AddingNumbers {
     private static final Scanner input = new Scanner(System.in);
 
-    public static String Counter(int total){
+    public static int Counter(int total){
         int num, sum = 0;
         for(int i =0; i < total; i++){
             System.out.println("Enter a number:");
             num = input.nextInt();
             sum+=num;
         }
-        return "The total is " + sum;
+        return sum;
 
+    }
+    public static String Output(int total){
+        return String.format("The total is %d", total);
     }
     public static void main(String[] args) {
         System.out.println("How many numbers would you like to add?");
         int total = input.nextInt();
-        System.out.println(Counter(total));
+        System.out.println(Output(Counter(total)));
 
     }
 }
