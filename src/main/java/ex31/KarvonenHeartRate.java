@@ -35,8 +35,6 @@ Display the results in a tabular format.
  */
 package ex31;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Scanner;
 
 public class KarvonenHeartRate {
@@ -52,10 +50,8 @@ public class KarvonenHeartRate {
         return input.nextInt();
     }
 
-    public static void TargetHeartRate(){
-        int age = Age();
-        int rhr = RestingHeartRate();
-        int thr;
+    public static int TargetHeartRate(int age, int rhr){
+        int thr = 0;
         System.out.println("Resting Pulse: " + rhr + "          Age: " + age);
         System.out.println();
         System.out.println("Intensity    | Rate");
@@ -63,12 +59,12 @@ public class KarvonenHeartRate {
         for(int i = 55; i<= 95; i+=5){
             thr = (int) Math.ceil((((220 - age) - rhr) * i/100) + rhr);
             System.out.println(String.format("%d%%          | %d bpm", i, thr));
-            thr = 0;
         }
+        return thr;
     }
 
     public static void main(String[] args) {
-        TargetHeartRate();
+        TargetHeartRate(Age(), RestingHeartRate());
     }
 }
 
